@@ -88,9 +88,8 @@ class zpider():
             client.settimeout(timeout)
         try:
             # 连接主机
-            client.connect((host.split(":")[0], 8080))
+            client.connect((host, 80))
             # 发送报文
-            print(mess)
             client.sendall(mess.encode())
             # 接受数据
             rec = b""
